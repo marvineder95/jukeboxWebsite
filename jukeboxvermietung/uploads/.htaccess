@@ -1,0 +1,12 @@
+# Uploads-Verzeichnis - Keine PHP-Ausführung erlauben
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+<FilesMatch "\.(php|php\.|php3|php4|php5|phtml|pl|py|jsp|asp|aspx|cgi|sh|bash)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Verzeichnisauflistung deaktivieren
+Options -Indexes
